@@ -1,0 +1,60 @@
+@import "@angular/material";
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body {
+  font-family: "Cambria Math";
+}
+.city-input-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+}
+h2 {
+  font-size: 26px;
+}
+input {
+  padding: 10px;
+  font-size: 18px;
+  font-style: italic;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+button {
+  border: 3px slategray;
+  background-color: lightskyblue;
+  padding: 12px;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+button:hover {
+  cursor: pointer;
+  box-shadow: 3px 5px gray;
+}
+.weather-viewer {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: 50% 50%;
+  grid-column: span 3;
+}
+/*.weather-viewer {*/
+/*  display: flex;*/
+/*  flex-direction: row;*/
+/*  justify-content: center;*/
+/*}*/
+p {
+  color: #0064e5;
+  margin: 0 0 10px 0;
+  font-size: 22px;
+}
+.weather-days > p {
+  font-size: 18px;
+}
+
+

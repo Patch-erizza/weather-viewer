@@ -1,0 +1,25 @@
+<!--Сделать инпут (поле ввода) для задания города,
+немного ждем, отправляем запрос в апи, показываем пользователю-->
+<!--debaunsing (дождаться ввода последней буквы, потом отправлять запрос на свервер)-->
+<div class="app-wrapper">
+  <h1>Узнайте погоду в своем городе!</h1>
+  <div class="city-input-wrapper">
+    <h2>Ваш город:</h2>
+    <input type="text" [(ngModel)]="cityName"/>
+    <button (click)="loadWeather()">Показать</button>
+  </div>
+
+  <progress-spinner-overview-example></progress-spinner-overview-example>
+
+  <div *ngIf="weathers" class="weather-viewer">
+    <p>Температура:<br>{{weathers.temperature}}</p>
+    <p>Скорость ветра:<br>{{weathers.wind}}</p>
+    <p>{{weathers.description}}</p>
+    <div *ngFor="let forecast of weathers.forecast" class="weather-days">
+      <p>{{forecast.day}}</p>
+      <p>Температура:<br>{{forecast.temperature}}</p>
+      <p>Скорость ветра:<br>{{forecast.wind}}</p>
+      <p>{{forecast.description}}</p>
+    </div>
+  </div>
+</div>
